@@ -18,7 +18,7 @@ jobs:
       
     - name: Get current date
       id: date
-      run: echo $(date +'%Y-%m-%d--%H-%M-%S') >> date.txt
+      run: echo $(date +'%YY-%mm-%dd--%HH-%MM-%SS') >> date.txt
       
     - name: Set date as environment variable
       run: echo "DATE=$(cat date.txt)" >> $GITHUB_ENV
