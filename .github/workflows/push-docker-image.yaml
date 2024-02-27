@@ -20,12 +20,11 @@ jobs:
       id: date
       run: echo $(date +'%Y-%m-%d--%H-%M-%S') >> date.txt
       
-    - name: Read date from file
-      id: read_date
-      run: echo "::set-output name=date::$(cat date.txt)"
+    - name: Set date as environment variable
+      run: echo "DATE=$(cat date.txt)" >> $GITHUB_ENV
       
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag $DOCKER_USER/$REPO_NAME:${{ steps.read_date.outputs.date }}
+      run: docker build . --file Dockerfile --tag $DOCKER_USER/$REPO_NAME:${{ env.DATE }}
       
     - name: Docker Push
-      run: docker push $DOCKER_USER/$REPO_NAME:${{ steps.read_date.outputs.date }}
+      run: docker push $DOCKER_USER/$REPO_NAME:${{ env.DATE }}
