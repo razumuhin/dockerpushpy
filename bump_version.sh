@@ -24,4 +24,6 @@ echo $new_version
 #
 ## Docker imajını Docker Hub'a it
 #docker push razumuhin/py:$new_version
+docker build -t razumuhin/py:$new_version .
+docker push razumuhin/py:$new_version
 
