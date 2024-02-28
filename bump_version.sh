@@ -1,5 +1,7 @@
 #!/bin/bash
 
+chmod +x bump_version.sh  # Betiği çalıştırılabilir hale getir
+
 # Mevcut versiyon numarasını al
 current_version=$(grep 'VERSION' Dockerfile | sed -n 's/.*VERSION="\([^"]*\)".*/\1/p')
 
@@ -11,3 +13,4 @@ sed -i.bak "s/VERSION=\"$current_version\"/VERSION=\"$new_version\"/g" Dockerfil
 
 # Yeni versiyon numarasını çıktı olarak yazdır
 echo $new_version
+
