@@ -14,16 +14,6 @@ sed -i.bak "s/VERSION=\"$current_version\"/VERSION=\"$new_version\"/g" Dockerfil
 # Yeni versiyon numarasını çıktı olarak yazdır
 echo $new_version
 
-## Docker imajını etiketle ve Docker Hub'a it
-#docker build -t razumuhin/py:$new_version .
-#docker push razumuhin/py:$new_version
-#docker tag razumuhin/py:$new_version razumuhin/py:latest
-#docker push razumuhin/py:latest
-# Docker imajını oluştur
-#docker build -t razumuhin/py:$new_version .
-#
-## Docker imajını Docker Hub'a it
-#docker push razumuhin/py:$new_version
 docker build -t razumuhin/py:$new_version .
 docker push razumuhin/py:$new_version
 
