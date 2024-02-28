@@ -14,6 +14,6 @@ sed -i.bak "s/VERSION=\"$current_version\"/VERSION=\"$new_version\"/g" Dockerfil
 # Yeni versiyon numarasını çıktı olarak yazdır
 echo $new_version
 
-docker build -t razumuhin/py:$new_version .
+docker buildx build -t razumuhin/py:$new_version .
 docker push razumuhin/py:$new_version
 
