@@ -20,8 +20,8 @@ echo $new_version
 #docker tag razumuhin/py:$new_version razumuhin/py:latest
 #docker push razumuhin/py:latest
 # Docker imajını oluştur
-docker build -t razumuhin/py:$new_version .
-
-# Docker imajını Docker Hub'a it
-docker push razumuhin/py:$new_version
+#docker build -t razumuhin/py:$new_version .
+#
+## Docker imajını Docker Hub'a it
+#docker push razumuhin/py:$new_version
 
