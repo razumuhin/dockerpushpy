@@ -25,9 +25,10 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       -
-        name: Build and push
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          push: true
-          tags: razumuhin/py:latest
+        name: Bump version and build
+        run: |
+          new_version=$(./bump_version.sh)
+          echo "New version: $new_version"
+          docker build -t razumuhin/py:$new_version .
+          docker push razumuhin/py:$new_version
+
