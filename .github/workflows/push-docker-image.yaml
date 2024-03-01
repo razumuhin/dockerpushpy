@@ -34,8 +34,7 @@ jobs:
       -
         name: Bump version and build
         run: |
-          cd src
-          docker build -t razumuhin/py:${{github.run_number}} .
+          docker build -t razumuhin/py:${{github.run_number}} src
           docker push razumuhin/py:${{github.run_number}}
       - 
         name: Edit helm chart values.yaml 
