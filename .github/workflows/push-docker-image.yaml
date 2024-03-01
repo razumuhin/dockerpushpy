@@ -38,7 +38,7 @@ jobs:
           docker push razumuhin/py:${{github.run_number}} 
 
       - name: Install yq
-        run: sudo apt-get install yq -y
+        run: sudo apt-get install python3-pip && sudo pip3 install yq 
 
       - name: Edit values.yaml
         run: |
