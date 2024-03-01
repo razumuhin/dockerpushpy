@@ -1,7 +1,7 @@
 replicaCount: 1
 image:
   repository: razumuhin/py
-  tag: '58'
+  tag: '59'
   pullPolicy: IfNotPresent
 imagePullSecrets: []
 nameOverride: ''
@@ -37,7 +37,6 @@ readinessProbe:
   httpGet:
     path: /
     port: 5000
-
 autoscaling:
   enabled: false
   minReplicas: 1
