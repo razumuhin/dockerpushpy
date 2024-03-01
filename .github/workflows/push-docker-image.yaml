@@ -51,10 +51,10 @@ jobs:
           git config --local user.name "GitHub Action"
           git add mychart/values.yaml
           git commit -m "Update values.yaml"
-          git push
+
       
-      #- name: Push changes
-      #  uses: ad-m/github-push-action@master
-      #  with:
-      #    github_token: ${{ secrets.PAT }} 
-      #   
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.PAT }} 
+         
