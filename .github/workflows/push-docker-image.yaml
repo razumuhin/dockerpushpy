@@ -42,7 +42,7 @@ jobs:
 
       - name: Edit values.yaml
         run: |
-          yq -i '.image.tag = "${{github.run_number}}"' /mychart/values.yaml 
+          yq -i '.image.tag = "${{github.run_number}}"' mychart/values.yaml 
           # This line updates the 'tag' key in the values.yaml with the build number
 
       - name: Commit changes

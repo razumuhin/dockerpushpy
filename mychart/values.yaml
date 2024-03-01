@@ -12,7 +12,7 @@ replicaCount: 1
 
 image:
   repository: razumuhin/py
-  tag: ""
+  tag: "50"
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
