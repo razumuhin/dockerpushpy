@@ -8,7 +8,7 @@ name: ci
 on:
   push:
     paths:
-      - 'src*' # İzlemek istediğiniz dizinin yolu
+      - 'src/*' # İzlemek istediğiniz dizinin yolu
 
 jobs:
   docker:
