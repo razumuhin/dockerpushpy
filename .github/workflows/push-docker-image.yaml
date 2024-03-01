@@ -1,9 +1,14 @@
 name: ci
 
+#on:
+#  push:
+#    branches:
+#      - 'main'
+
 on:
   push:
-    branches:
-      - 'main'
+    paths:
+      - 'src*' # İzlemek istediğiniz dizinin yolu
 
 jobs:
   docker:
@@ -29,3 +34,8 @@ jobs:
         run: |
           docker build -t razumuhin/py:${{github.run_number}} .
           docker push razumuhin/py:${{github.run_number}}
+      - 
+        name: Edit helm chart values.yaml 
+        run: |
+          
+         
