@@ -1,7 +1,7 @@
 replicaCount: 1
 image:
   repository: razumuhin/py
-  tag: '59'
+  tag: '60'
   pullPolicy: IfNotPresent
 imagePullSecrets: []
 nameOverride: ''
