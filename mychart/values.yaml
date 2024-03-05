@@ -16,7 +16,7 @@ podLabels: {}
 podSecurityContext: {}
 securityContext: {}
 service:
-  type: NodePort
+  type: LoadBalancer
   port: 5000
 ingress:
   enabled: false
